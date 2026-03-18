@@ -9,16 +9,12 @@ data class ConversionResult(
     val baseCurrencyCode: String,
     @SerializedName("base_currency_name")
     val baseCurrencyName: String,
-    val rates: Rates,
+    val rates: Map<String, Rate>,
     val status: String,
     @SerializedName("updated_date")
     val updatedDate: String
 ) {
-    data class Rates(
-        @SerializedName("CAD")
-        val cAD: CAD
-    ) {
-        data class CAD(
+    data class Rate(
             @SerializedName("currency_name")
             val currencyName: String,
             val rate: String,
@@ -26,4 +22,3 @@ data class ConversionResult(
             val rateForAmount: String
         )
     }
-}
