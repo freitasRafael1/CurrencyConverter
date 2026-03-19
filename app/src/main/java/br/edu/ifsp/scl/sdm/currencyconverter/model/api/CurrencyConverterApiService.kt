@@ -12,7 +12,7 @@ interface CurrencyConverterApiService {
 
     @Headers(
         "x-rapidapi-host: currency-converter5.p.rapidapi.com",
-                "'x-rapidapi-key: 92cbfcadbbmsh65c88133f386207p1389bfjsnc6224183e3af"
+                "x-rapidapi-key: 92cbfcadbbmsh65c88133f386207p1389bfjsnc6224183e3af"
 
     )
     @GET("list")
